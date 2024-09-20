@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleBinario.css">
+    <title>Conversor Binário</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="home" href="./Marise Machine.html">Marise's Machine</a>
+            <ul class="nav-list">
+                <li><a href="./Decimal.html">Decimal</a></li>
+                <li><a href="./Binario.html">Binário</a></li>
+                <li><a href="./Octal.html">Octal</a></li>
+                <li><a href="./Hexadecimal.html">Hexadecimal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="conversao-binario">
+            <div id="titulo">
+                <h3>Binário</h3>
+            </div>
+
+            <div id="informacoes">
+                <input id="input_numero" type="text" placeholder="Digite o valor em decimal">
+
+                <div id="base-conversao">
+                    <h3>Converter para:</h3>
+
+                    <div class="opcao">
+                        <input type="checkbox" id="checkbox-dec">
+                        <label for="checkbox-dec"><b>Decimal</b></label>
+                        <div id="resultado_decimal"></div>
+                    </div>
+
+                    <div class="opcao">
+                        <input type="checkbox" id="checkbox-octal">
+                        <label for="checkbox-octal"><b>Octal</b></label>
+                        <div id="resultado_octal"></div>
+                    </div>
+
+                    <div class="opcao">
+                        <input type="checkbox" id="checkbox-hexa">
+                        <label for="checkbox-hexa"><b>Hexadecimal</b></label>
+                        <div id="resultado_hexadecimal"></div>
+                    </div>
+                </div>
+
+                <button id="button-conversao" onclick="converterBinario()">
+                    Converter
+                </button>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
+
+<script>
+    function converterBinario() {
+        var binario = Number(input_numero.value);
+        let decimal = parseInt(binario, 2).toString(10);
+        let octal = parseInt(binario, 2).toString(8);
+        let hexadecimal = parseInt(binario, 2).toString(16);
+
+        input_numero.innerHTML = ` ${binario}`;
+        resultado_decimal.innerHTML = ` ${decimal}`;
+        resultado_octal.innerHTML = ` ${octal}`;
+        resultado_hexadecimal.innerHTML = ` ${hexadecimal}`;
+    }
+</script>
