@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleOctal.css">
+    <link rel="stylesheet" href="../estilisação/styleOctal.css">
     <title>Conversor Octal</title>
 </head>
 <body>
     <header>
         <nav>
-            <a class="home" href="./Marise Machine.html">Marise's Machine</a>
+            <a class="home" href="../Marise Machine.html">Marise's Machine</a>
             <ul class="nav-list">
                 <li><a href="./Decimal.html">Decimal</a></li>
                 <li><a href="./Binario.html">Binário</a></li>
@@ -59,16 +59,4 @@
 </body>
 </html>
 
-<script>
-    function converterOctal() {
-        var octal = Number(input_numero.value);
-        let decimal = parseInt(octal, 8);
-        let binaria = parseInt(octal, 8).toString(2);
-        let hexadecimal = parseInt(octal, 8).toString(16);
-
-        input_numero.innerHTML = ` ${octal}`;
-        resultado_decimal.innerHTML = ` ${decimal}`;
-        resultado_binario.innerHTML = ` ${binaria}`;
-        resultado_hexadecimal.innerHTML = ` ${hexadecimal}`;
-    }
-</script>
+<script src="../script.js"></script>

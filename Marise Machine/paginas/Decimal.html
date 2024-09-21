@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleHexa.css">
-    <title>Conversor Hexadecimal</title>
+    <link rel="stylesheet" href="../estilisação/styleDEcimal.css">
+    <title>Marise's Machine</title>
 </head>
 <body>
     <header>
         <nav>
-            <a class="home" href="./Marise Machine.html">Marise's Machine</a>
+            <a class="home" href="../Marise Machine.html">Marise's Machine</a>
             <ul class="nav-list">
                 <li><a href="./Decimal.html">Decimal</a></li>
                 <li><a href="./Binario.html">Binário</a></li>
@@ -18,24 +18,18 @@
             </ul>
         </nav>
     </header>
-
+    
     <main>
-        <article class="conversao-hexa">
+        <article class="conversao-decimal">
             <div id="titulo">
-                <h3>Hexadecimal</h3>
+                <h3>Decimal</h3>
             </div>
 
             <div id="informacoes">
-                <input id="input_numero" placeholder="Digite o valor em hexadecimal">
+                <input id="input_numero" type="text" placeholder="Digite o valor em decimal">
 
                 <div id="base-conversao">
                     <h3>Converter para:</h3>
-
-                    <div class="opcao">
-                        <input type="checkbox" id="checkbox-dec">
-                        <label for="checkbox-dec"><b>Decimal</b></label>
-                        <div id="resultado_decimal"></div>
-                    </div>
 
                     <div class="opcao">
                         <input type="checkbox" id="checkbox-bin">
@@ -48,9 +42,15 @@
                         <label for="checkbox-octal"><b>Octal</b></label>
                         <div id="resultado_octal"></div>
                     </div>
+
+                    <div class="opcao">
+                        <input type="checkbox" id="checkbox-hexa">
+                        <label for="checkbox-hexa"><b>Hexadecimal</b></label>
+                        <div id="resultado_hexadecimal"></div>
+                    </div>
                 </div>
 
-                <button id="button-conversao" onclick="converterHexa()">
+                <button id="button-conversao" onclick="converterDecimal()">
                     Converter
                 </button>
             </div>
@@ -59,16 +59,4 @@
 </body>
 </html>
 
-<script>
-    function converterHexa() {
-        var hexa = Number(input_numero.value);
-        let decimal = parseInt(hexa, 16);
-        let binaria = parseInt(hexa, 16).toString(2);
-        let hexadecimal = parseInt(hexa, 16).toString(8);
-
-        input_numero.innerHTML = ` ${hexa}`;
-        resultado_decimal.innerHTML = ` ${decimal}`;
-        resultado_binario.innerHTML = ` ${binaria}`;
-        resultado_octal.innerHTML = ` ${octal}`;
-    }
-</script>
+<script src="../script.js"></script>
