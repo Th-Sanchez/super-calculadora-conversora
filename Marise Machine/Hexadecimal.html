@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleHexa.css">
     <title>Conversor Hexadecimal</title>
 </head>
 <body>
@@ -17,5 +18,57 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <article class="conversao-hexa">
+            <div id="titulo">
+                <h3>Hexadecimal</h3>
+            </div>
+
+            <div id="informacoes">
+                <input id="input_numero" placeholder="Digite o valor em hexadecimal">
+
+                <div id="base-conversao">
+                    <h3>Converter para:</h3>
+
+                    <div class="opcao">
+                        <input type="checkbox" id="checkbox-dec">
+                        <label for="checkbox-dec"><b>Decimal</b></label>
+                        <div id="resultado_decimal"></div>
+                    </div>
+
+                    <div class="opcao">
+                        <input type="checkbox" id="checkbox-bin">
+                        <label for="checkbox-bin"><b>Binário</b></label>
+                        <div id="resultado_binario"></div>
+                    </div>
+
+                    <div class="opcao">
+                        <input type="checkbox" id="checkbox-octal">
+                        <label for="checkbox-octal"><b>Octal</b></label>
+                        <div id="resultado_octal"></div>
+                    </div>
+                </div>
+
+                <button id="button-conversao" onclick="converterHexa()">
+                    Converter
+                </button>
+            </div>
+        </article>
+    </main>
 </body>
 </html>
+
+<script>
+    function converterHexa() {
+        var hexa = Number(input_numero.value);
+        let decimal = parseInt(hexa, 16);
+        let binaria = parseInt(hexa, 16).toString(2);
+        let hexadecimal = parseInt(hexa, 16).toString(8);
+
+        input_numero.innerHTML = ` ${hexa}`;
+        resultado_decimal.innerHTML = ` ${decimal}`;
+        resultado_binario.innerHTML = ` ${binaria}`;
+        resultado_octal.innerHTML = ` ${octal}`;
+    }
+</script>
