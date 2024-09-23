@@ -20,9 +20,9 @@
     </header>
     
     <main>
-        <article class="conversao-decimal">
+        <article class="container">
             <div id="titulo">
-                <h3>Decimal</h3>
+                <h1>Decimal</h1>
             </div>
 
             <div id="informacoes">
@@ -52,6 +52,52 @@
 
                 <button id="button-conversao" onclick="converterDecimal()">
                     Converter
+                </button>
+            </div>
+        </article>
+
+        <article class="container">
+            <div id="titulo">
+                <h3>Soma</h3>
+            </div>
+
+            <div id="informacoes">
+                <h3>Digite os valores:</h3>
+
+                <div class="input_numeros">
+                    <input type="number" id="input_numero1" placeholder="Digite o valor em decimal">
+                    <p>+</p>
+                    <input type="number" id="input_numero2" placeholder="Digite o valor em decimal">
+                </div>
+
+                <h3 id="h3_texto"></h3>
+                <div id="div_resultado_soma"></div>
+
+                <button id="button-ssmd" onclick="somaDecimal()">
+                    Somar
+                </button>
+            </div>
+        </article>
+
+        <article class="container">
+            <div id="titulo">
+                <h3>Subtração</h3>
+            </div>
+
+            <div id="informacoes">
+                <h3>Digite os valores:</h3>
+
+                <div class="input_numeros">
+                    <input type="number" id="input_numero3" placeholder="Digite o valor em decimal">
+                    <p>-</p>
+                    <input type="number" id="input_numero4" placeholder="Digite o valor em decimal">
+                </div>
+
+                <h3 id="h3_texto"></h3>
+                <div id="div_resultado_subtracao"></div>
+
+                <button id="button-ssmd" onclick="subtracaoDecimal()">
+                    Subtração
                 </button>
             </div>
         </article>

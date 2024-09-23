@@ -8,7 +8,6 @@
 
 body, html {
     height: 100%;
-    overflow: hidden;
 }
 
 body {
@@ -76,7 +75,7 @@ a:hover {
     margin-left: 32px;
 }
 
-.conversao-decimal {
+.container {
     background-color: rgb(60, 61, 55);
     display: flex;
     flex-direction: column;
@@ -84,12 +83,20 @@ a:hover {
     max-height: 80vh;
     justify-content: flex-start;
     overflow: auto;
+    margin-top: 5vh;
 }
 
 .opcao {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.input_numeros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 
 #titulo {
@@ -105,9 +112,10 @@ a:hover {
 
 #informacoes {
     padding: 20px;
+    color: white;
 }
 
-#input_numero {
+#input_numero, #input_numero1, #input_numero2{
     color: black;
     padding: 10px;
     width: 80%;
@@ -133,6 +141,18 @@ a:hover {
 }
 
 #button-conversao:hover {
+    background-color: rgb(142, 146, 140);
+}
+
+#button-ssmd {
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 20px;
+    width: 100%;
+    background-color: rgb(189, 194, 186);
+}
+
+#button-soma:hover {
     background-color: rgb(142, 146, 140);
 }
 
