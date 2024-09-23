@@ -15,7 +15,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: rgb(236, 223, 204);
+    background-image : url("https://media1.tenor.com/m/7pIpaveASyIAAAAd/dws.gif");
     background-size: cover;
     background-position: center;
     font-family: "Poppins";
@@ -78,6 +78,8 @@ a:hover {
 
 .container {
     background-color: rgb(60, 61, 55);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     display: flex;
     flex-direction: column;
     width: 80vh;
@@ -130,12 +132,12 @@ a:hover {
     border-radius: 10px;
     font-size: 20px;
     width: 100%;
-    background-color: rgb(189, 194, 186);
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
     border: none;
 }
 
 #button-conversao:hover {
-    background-color: rgb(142, 146, 140);
+    opacity: 0.7;
     
 }
 
