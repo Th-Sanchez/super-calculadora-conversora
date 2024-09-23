@@ -58,6 +58,10 @@ a:hover {
     opacity: 0.7;
 }
 
+main {
+    margin-top: 115vh;
+}
+
 .home {
     font-size: 24px;
     text-transform: uppercase;
@@ -76,6 +80,7 @@ a:hover {
 }
 
 .container {
+    position: relative;
     background-color: rgb(60, 61, 55);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     border: 2px solid rgba(255, 255, 255, 0.5);
@@ -101,6 +106,14 @@ a:hover {
     padding: 10px;
 }
 
+.input-valores {
+    color: black;
+    padding: 10px;
+    width: 80%;
+    text-align: left;
+    border-radius: 20px;
+}
+
 #titulo {
     background-color: rgb(42, 43, 38);
     color: white;
@@ -115,14 +128,6 @@ a:hover {
 #informacoes {
     padding: 20px;
     color: white;
-}
-
-#input_numero, #input_numero1, #input_numero2{
-    color: black;
-    padding: 10px;
-    width: 80%;
-    text-align: left;
-    border-radius: 20px;
 }
 
 #base-conversao {

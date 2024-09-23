@@ -109,7 +109,7 @@ a:hover {
     padding: 20px;
 }
 
-#input_numero {
+.input-valores {
     color: black;
     padding: 10px;
     width: 80%;
