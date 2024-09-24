@@ -21,7 +21,7 @@ function converterBinario() {
     let octal = parseInt(binario, 2).toString(8);
     let hexadecimal = parseInt(binario, 2).toString(16);
 
-    if (isNaN(decimal) || isNaN(octal) || isNaN(hexadecimal)) {
+    if (isNaN(decimal)) {
         resultado_decimal.innerHTML = `Valor inválido`
         resultado_octal.innerHTML = `Valor inválido`   
         resultado_hexadecimal.innerHTML = `Valor inválido` 
@@ -38,7 +38,7 @@ function converterOctal() {
     let binario = parseInt(octal, 8).toString(2);
     let hexadecimal = parseInt(octal, 8).toString(16);
 
-    if (isNaN(decimal) || isNaN(binario) || isNaN(hexadecimal)) {
+    if (isNaN(decimal)) {
         resultado_decimal.innerHTML = `Valor inválido`
         resultado_binario.innerHTML = `Valor inválido`
         resultado_hexadecimal.innerHTML = `Valor inválido`    
@@ -55,7 +55,7 @@ function converterHexa() {
     let binario = parseInt(hexa, 16).toString(2);
     let octal = parseInt(hexa, 16).toString(8);
 
-    if (isNaN(decimal) || isNaN(binario) || isNaN(octal)) {
+    if (isNaN(decimal)) {
         resultado_decimal.innerHTML = `Valor inválido`
         resultado_binario.innerHTML = `Valor inválido`
         resultado_octal.innerHTML = `Valor inválido`    
@@ -123,8 +123,8 @@ function divisaoDecimal() {
 }
 
 function somaBinario() {
-    const numero1 = parseInt(input_numero1.value).toString(10)
-    const numero2 = parseInt(input_numero2.value, 2).toString(10)
+    const numero1 = parseInt(input_numero1.value, 2)
+    const numero2 = parseInt(input_numero2.value, 2)
     var resultado
 
     resultado = numero1 + numero2
@@ -137,8 +137,8 @@ function somaBinario() {
 }
 
 function subtracaoBinario() {
-    const numero1 = Number(input_numero3.value)
-    const numero2 = Number(input_numero4.value)
+    const numero1 = parseInt(input_numero3.value, 2)
+    const numero2 = parseInt(input_numero4.value, 2)
     var resultado
 
     resultado = numero1 - numero2
@@ -146,13 +146,13 @@ function subtracaoBinario() {
     if (isNaN(numero1) || isNaN(numero2) || isNaN(resultado)){
         div_resultado_subtracao.innerHTML = `Valores inválidos`
     } else {
-        div_resultado_subtracao.innerHTML = `A subtração entra os número é de ${resultado}`
+        div_resultado_subtracao.innerHTML = `A subtração entra os número é de ${resultado.toString(2)}`
     }
 }
 
 function multiplicacaoBinario() {
-    const numero1 = Number(input_numero5.value)
-    const numero2 = Number(input_numero6.value)
+    const numero1 = parseInt(input_numero5.value, 2)
+    const numero2 = parseInt(input_numero6.value, 2)
     var resultado
 
     resultado = numero1 * numero2
@@ -160,13 +160,13 @@ function multiplicacaoBinario() {
     if (isNaN(numero1) || isNaN(numero2) || isNaN(resultado)){
         div_resultado_multiplicacao.innerHTML = `Valores inválidos`
     } else {
-        div_resultado_multiplicacao.innerHTML = `A multiplicação entra os número é de ${resultado}`
+        div_resultado_multiplicacao.innerHTML = `A multiplicação entra os número é de ${resultado.toString(2)}`
     }
 }
 
 function divisaoBinario() {
-    const numero1 = Number(input_numero7.value)
-    const numero2 = Number(input_numero8.value)
+    const numero1 = parseInt(input_numero7.value, 2)
+    const numero2 = parseInt(input_numero8.value, 2)
     var resultado
 
     resultado = numero1 / numero2
@@ -174,6 +174,117 @@ function divisaoBinario() {
     if (isNaN(numero1) || isNaN(numero2) || isNaN(resultado)){
         div_resultado_divisao.innerHTML = `Valores inválidos`
     } else {
-        div_resultado_divisao.innerHTML = `A divisão entra os número é de ${resultado}`
+        div_resultado_divisao.innerHTML = `A divisão entra os número é de ${resultado.toString(2)}`
+    }
+}
+
+function somaOctal() {
+    const numero1 = parseInt(input_numero1.value, 8)
+    const numero2 = parseInt(input_numero2.value, 8)
+    var resultado
+
+    resultado = numero1 + numero2
+    h3_texto.innerHTML = `Resultado`
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(resultado)){
+        div_resultado_soma.innerHTML = `Valores inválidos`
+    } else {
+        div_resultado_soma.innerHTML = `A soma entra os número é de ${resultado.toString(8)}`
+    }
+}
+
+function subtracaoOctal() {
+    const numero1 = parseInt(input_numero3.value, 8)
+    const numero2 = parseInt(input_numero4.value, 8)
+    var resultado
+
+    resultado = numero1 - numero2
+    h3_texto.innerHTML = `Resultado`
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(resultado)){
+        div_resultado_subtracao.innerHTML = `Valores inválidos`
+    } else {
+        div_resultado_subtracao.innerHTML = `A subtração entra os número é de ${resultado.toString(8)}`
+    }
+}
+
+function multiplicacaoOctal() {
+    const numero1 = parseInt(input_numero5.value, 8)
+    const numero2 = parseInt(input_numero6.value, 8)
+    var resultado
+
+    resultado = numero1 * numero2
+    h3_texto.innerHTML = `Resultado`
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(resultado)){
+        div_resultado_multiplicacao.innerHTML = `Valores inválidos`
+    } else {
+        div_resultado_multiplicacao.innerHTML = `A multiplicação entra os número é de ${resultado.toString(8)}`
+    }
+}
+
+function divisaoOctal() {
+    const numero1 = parseInt(input_numero7.value, 8)
+    const numero2 = parseInt(input_numero8.value, 8)
+    var resultado
+
+    resultado = numero1 / numero2
+    h3_texto.innerHTML = `Resultado`
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(resultado)){
+        div_resultado_divisao.innerHTML = `Valores inválidos`
+    } else {
+        div_resultado_divisao.innerHTML = `A divisão entra os número é de ${resultado.toString(8)}`
+    }
+}
+function somaHexa() {
+    const numero1 = parseInt(input_numero1.value, 16)
+    const numero2 = parseInt(input_numero2.value, 16)
+    var resultado
+
+    resultado = numero1 + numero2
+    h3_texto.innerHTML = `Resultado`
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(resultado)){
+        div_resultado_soma.innerHTML = `Valores inválidos`
+    } else {
+        div_resultado_soma.innerHTML = `A soma entra os número é de ${resultado.toString(16)}`
+    }
+}
+
+function subtracaoHexa() {
+    const numero1 = parseInt(input_numero3.value, 16)
+    const numero2 = parseInt(input_numero4.value, 16)
+    var resultado
+
+    resultado = numero1 - numero2
+    h3_texto.innerHTML = `Resultado`
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(resultado)){
+        div_resultado_subtracao.innerHTML = `Valores inválidos`
+    } else {
+        div_resultado_subtracao.innerHTML = `A subtração entra os número é de ${resultado.toString(16)}`
+    }
+}
+
+function multiplicacaoHexa() {
+    const numero1 = parseInt(input_numero5.value, 16)
+    const numero2 = parseInt(input_numero6.value, 16)
+    var resultado
+
+    resultado = numero1 * numero2
+    h3_texto.innerHTML = `Resultado`
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(resultado)){
+        div_resultado_multiplicacao.innerHTML = `Valores inválidos`
+    } else {
+        div_resultado_multiplicacao.innerHTML = `A multiplicação entra os número é de ${resultado.toString(16)}`
+    }
+}
+
+function divisaoHexa() {
+    const numero1 = parseInt(input_numero7.value, 16)
+    const numero2 = parseInt(input_numero8.value, 16)
+    var resultado
+
+    resultado = numero1 / numero2
+    h3_texto.innerHTML = `Resultado`
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(resultado)){
+        div_resultado_divisao.innerHTML = `Valores inválidos`
+    } else {
+        div_resultado_divisao.innerHTML = `A divisão entra os número é de ${resultado.toString(16)}`
     }
 }
