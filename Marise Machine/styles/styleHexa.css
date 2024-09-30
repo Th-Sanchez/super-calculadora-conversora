@@ -33,6 +33,7 @@ nav {
     left: 0;
     width: 100%;
     z-index: 1000;
+    border-bottom: 2px solid red;
 }
 
 a {
@@ -62,10 +63,10 @@ a:hover {
     margin-left: 32px;
 }
 
+
 .container {
     background-color: rgb(60, 61, 55);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(255, 255, 255, 0.5);
     display: flex;
     flex-direction: column;
     width: 80vh;
@@ -92,6 +93,7 @@ a:hover {
     width: 80%;
     text-align: left;
     border-radius: 20px;
+    border: none;
 }
 
 .titulo {
@@ -103,6 +105,7 @@ a:hover {
     border: none;
     outline: none;
     box-sizing: border-box;
+    border-bottom: 2px solid red;
 }
 
 .informacoes {
@@ -124,7 +127,11 @@ a:hover {
     border-radius: 10px;
     font-size: 20px;
     width: 100%;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: red;
+    font-family: "Poppins";
+    font-weight: bold;
+    color: white;
+    border: none;
 }
 
 #button-conversao:hover {
@@ -136,17 +143,21 @@ a:hover {
     margin-top: 15px;
     font-size: 20px;
     width: 100%;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: red;
+    font-family: "Poppins";
+    font-weight: bold;
+    color: white;
+    border: none;
 }
 
 #button-soma:hover {
     opacity: 0.7;
 }
 
-#resultado_octal, #resultado_hexadecimal, #resultado_binario {
+#resultado_octal, #resultado_decimal, #resultado_binario {
     display: none;
 }
 
-#checkbox-octal:checked ~ #resultado_octal, #checkbox-hexa:checked ~ #resultado_hexadecimal, #checkbox-bin:checked ~ #resultado_binario {
+#checkbox-octal:checked ~ #resultado_octal, #checkbox-dec:checked ~ #resultado_decimal, #checkbox-bin:checked ~ #resultado_binario {
     display: block;
 }

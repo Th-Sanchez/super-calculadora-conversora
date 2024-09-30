@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilização/styleASCII.css">
+    <link rel="stylesheet" href="../styles/styleASCII.css">
     <title>Tabela ASCII</title>
 </head>
 <body>
@@ -27,14 +27,16 @@
             </div>
 
             <div class="informacoes">
-                <input id="input_ascii" class="input-valores" type="text" maxlength="1" placeholder="Digite o valor em ASCII">
-            </div>
+                <div class="input_numeros">
+                    <input id="input_ascii" class="input-valores" type="text" maxlength="1" placeholder="Digite o valor em ASCII">
+                </div>
 
-            <div class="resultado" id="div_resultado_ascii"></div>
-            
-            <button id="button-conversao" onclick="converterASCII()">
-                Converter
-            </button>
+                <div class="resultado" id="div_resultado_ascii"></div>
+                
+                <button id="button-conversao" onclick="converterASCII()">
+                    Converter
+                </button>
+            </div>
         </article>
     </main>
 </body>

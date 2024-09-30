@@ -4,14 +4,14 @@ function converterDecimal() {
     let octal = decimal.toString(8);
     let hexadecimal = decimal.toString(16);
 
-    if (isNaN(binario) || isNaN(octal) || isNaN(hexadecimal)) {
+    if (isNaN(binario) || isNaN(octal)) {
         resultado_binario.innerHTML = `Valor inválido`
         resultado_octal.innerHTML = `Valor inválido`
         resultado_hexadecimal.innerHTML = `Valor inválido`    
     } else {
         resultado_binario.innerHTML = ` ${binario}`;
         resultado_octal.innerHTML = ` ${octal}`;
-        resultado_hexadecimal.innerHTML = ` ${hexadecimal}`;
+        resultado_hexadecimal.innerHTML = ` ${hexadecimal.toUpperCase()}`;
     }
 }
 
@@ -28,7 +28,7 @@ function converterBinario() {
     } else {
         resultado_decimal.innerHTML = ` ${decimal}`;
         resultado_octal.innerHTML = ` ${octal}`;
-        resultado_hexadecimal.innerHTML = ` ${hexadecimal}`;
+        resultado_hexadecimal.innerHTML = ` ${hexadecimal.toUpperCase()}`;
     }
 }
 
@@ -45,7 +45,7 @@ function converterOctal() {
     } else {
         resultado_decimal.innerHTML = ` ${decimal}`;
         resultado_binario.innerHTML = ` ${binario}`;
-        resultado_hexadecimal.innerHTML = ` ${hexadecimal}`;
+        resultado_hexadecimal.innerHTML = ` ${hexadecimal.toUpperCase()}`;
     }
 }
 
@@ -72,9 +72,9 @@ function converterASCII() {
     var caractere = input_ascii.value;
     var decimal = caractere.charCodeAt();
 
-    div_resultado_ascii.innerHTML += "<b>Decimal: </b>" + decimal + '<br>';
-    div_resultado_ascii.innerHTML += "<b>Binário: </b>" + decimal.toString(2) + '<br>';
-    div_resultado_ascii.innerHTML += "<b>Hexadecimal: </b>" + decimal.toString(16) + '<br>';
+    div_resultado_ascii.innerHTML += `<b>Decimal: ${decimal}<br>`;
+    div_resultado_ascii.innerHTML += `<b>Binário: ${decimal.toString(2)}<br>`;
+    div_resultado_ascii.innerHTML += `<b>Hexadecimal: ${decimal.toString(16).toUpperCase()}<br>`;
 }
 
 function somaDecimal() {
@@ -255,7 +255,7 @@ function somaHexa() {
     if (isNaN(numero1) || isNaN(numero2) || isNaN(resultado)){
         div_resultado_soma.innerHTML = `Valores inválidos`
     } else {
-        div_resultado_soma.innerHTML = `A soma entra os número é de ${resultado.toString(16)}`
+        div_resultado_soma.innerHTML = `A soma entra os número é de ${resultado.toString(16).toUpperCase()}`
     }
 }
 
@@ -269,7 +269,7 @@ function subtracaoHexa() {
     if (isNaN(numero1) || isNaN(numero2) || isNaN(resultado)){
         div_resultado_subtracao.innerHTML = `Valores inválidos`
     } else {
-        div_resultado_subtracao.innerHTML = `A subtração entra os número é de ${resultado.toString(16)}`
+        div_resultado_subtracao.innerHTML = `A subtração entra os número é de ${resultado.toString(16).toUpperCase()}`
     }
 }
 
@@ -283,7 +283,7 @@ function multiplicacaoHexa() {
     if (isNaN(numero1) || isNaN(numero2) || isNaN(resultado)){
         div_resultado_multiplicacao.innerHTML = `Valores inválidos`
     } else {
-        div_resultado_multiplicacao.innerHTML = `A multiplicação entra os número é de ${resultado.toString(16)}`
+        div_resultado_multiplicacao.innerHTML = `A multiplicação entra os número é de ${resultado.toString(16).toUpperCase()}`
     }
 }
 
@@ -297,6 +297,6 @@ function divisaoHexa() {
     if (isNaN(numero1) || isNaN(numero2) || isNaN(resultado)){
         div_resultado_divisao.innerHTML = `Valores inválidos`
     } else {
-        div_resultado_divisao.innerHTML = `A divisão entra os número é de ${resultado.toString(16)}`
+        div_resultado_divisao.innerHTML = `A divisão entra os número é de ${resultado.toString(16).toUpperCase()}`
     }
 }

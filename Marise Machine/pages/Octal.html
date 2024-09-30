@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilização/styleBinario.css">
-    <title>Conversor Binário</title>
+    <link rel="stylesheet" href="../styles/styleOctal.css">
+    <title>Conversor Octal</title>
 </head>
 <body>
     <header>
@@ -23,11 +23,11 @@
     <main>
         <article class="container">
             <div class="titulo">
-                <h1>Binário</h1>
+                <h1>Octal</h1>
             </div>
 
             <div class="informacoes">
-                <input id="input_numero" class="input-valores" type="text" placeholder="Digite o valor em binário">
+                <input id="input_numero" class="input-valores" placeholder="Digite o valor em octal">
 
                 <div class="base-conversao">
                     <h3>Converter para:</h3>
@@ -39,9 +39,9 @@
                     </div>
 
                     <div class="opcao">
-                        <input type="checkbox" id="checkbox-octal">
-                        <label for="checkbox-octal"><b>Octal</b></label>
-                        <div id="resultado_octal"></div>
+                        <input type="checkbox" id="checkbox-bin">
+                        <label for="checkbox-bin"><b>Binário</b></label>
+                        <div id="resultado_binario"></div>
                     </div>
 
                     <div class="opcao">
@@ -51,7 +51,7 @@
                     </div>
                 </div>
 
-                <button id="button-conversao" onclick="converterBinario()">
+                <button id="button-conversao" onclick="converterOctal()">
                     Converter
                 </button>
             </div>
@@ -66,15 +66,15 @@
                 <h3>Digite os valores:</h3>
 
                 <div class="input_numeros">
-                    <input type="number" id="input_numero1" class="input-valores" placeholder="Digite o valor em binario">
+                    <input type="number" id="input_numero1" class="input-valores" placeholder="Digite o valor em octal">
                     <p>+</p>
-                    <input type="number" id="input_numero2" class="input-valores" placeholder="Digite o valor em binario">
+                    <input type="number" id="input_numero2" class="input-valores" placeholder="Digite o valor em octal">
                 </div>
 
                 <h3 id="h3_texto"></h3>
                 <div id="div_resultado_soma"></div>
 
-                <button id="button-ssmd" onclick="somaBinario()">
+                <button id="button-ssmd" onclick="somaOctal()">
                     Somar
                 </button>
             </div>
@@ -89,15 +89,15 @@
                 <h3>Digite os valores:</h3>
 
                 <div class="input_numeros">
-                    <input type="number" id="input_numero3" class="input-valores" placeholder="Digite o valor em binario">
+                    <input type="number" id="input_numero3" class="input-valores" placeholder="Digite o valor em octal">
                     <p>-</p>
-                    <input type="number" id="input_numero4" class="input-valores" placeholder="Digite o valor em binario">
+                    <input type="number" id="input_numero4" class="input-valores" placeholder="Digite o valor em octal">
                 </div>
 
                 <h3 id="h3_texto"></h3>
                 <div id="div_resultado_subtracao"></div>
 
-                <button id="button-ssmd" onclick="subtracaoBinario()">
+                <button id="button-ssmd" onclick="subtracaoOctal()">
                     Subtrair
                 </button>
             </div>
@@ -112,15 +112,15 @@
                 <h3>Digite os valores:</h3>
 
                 <div class="input_numeros">
-                    <input type="number" id="input_numero5" class="input-valores" placeholder="Digite o valor em binario">
+                    <input type="number" id="input_numero5" class="input-valores" placeholder="Digite o valor em octal">
                     <p>x</p>
-                    <input type="number" id="input_numero6" class="input-valores" placeholder="Digite o valor em binario">
+                    <input type="number" id="input_numero6" class="input-valores" placeholder="Digite o valor em octal">
                 </div>
 
                 <h3 id="h3_texto"></h3>
                 <div id="div_resultado_multiplicacao"></div>
 
-                <button id="button-ssmd" onclick="multiplicacaoBinario()">
+                <button id="button-ssmd" onclick="multiplicacaoOctal()">
                     Multiplicar
                 </button>
             </div>
@@ -135,15 +135,15 @@
                 <h3>Digite os valores:</h3>
 
                 <div class="input_numeros">
-                    <input type="number" id="input_numero7" class="input-valores" placeholder="Digite o valor em binario">
+                    <input type="number" id="input_numero7" class="input-valores" placeholder="Digite o valor em octal">
                     <p>÷</p>
-                    <input type="number" id="input_numero8" class="input-valores" placeholder="Digite o valor em binario">
+                    <input type="number" id="input_numero8" class="input-valores" placeholder="Digite o valor em octal">
                 </div>
 
                 <h3 id="h3_texto"></h3>
                 <div id="div_resultado_divisao"></div>
 
-                <button id="button-ssmd" onclick="divisaoBinario()">
+                <button id="button-ssmd" onclick="divisaoOctal()">
                     Dividir
                 </button>
             </div>
