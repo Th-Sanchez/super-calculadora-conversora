@@ -14,7 +14,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image : url("https://media1.tenor.com/m/7pIpaveASyIAAAAd/dws.gif");
+    background-image : url("https://uploads-ssl.webflow.com/60f09a3c21a8c34191ea5352/60f0b18fc453c17e039a638e_gif3.gif");
     background-size: cover;
     background-position: center;
     font-family: "Poppins";
@@ -80,7 +80,6 @@ a {
 .container {
     background-color: rgb(60, 61, 55, 0.95);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(255, 255, 255, 0.5);
     width: 100%;
     max-height: 80vh;
     display: flex;
