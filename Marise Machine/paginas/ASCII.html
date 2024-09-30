@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilização/styleASCII.css">
+    <title>Tabela ASCII</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="home" href="../Marise Machine.html">Marise's Machine</a>
+            <ul class="nav-list">
+                <li><a href="./Decimal.html">Decimal</a></li>
+                <li><a href="./Binario.html">Binário</a></li>
+                <li><a href="./Octal.html">Octal</a></li>
+                <li><a href="./Hexadecimal.html">Hexadecimal</a></li>
+                <li><a href="./ASCII.html">ASCII</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="container">
+            <div class="titulo">
+                <h1>ASCII</h1>
+            </div>
+
+            <div class="informacoes">
+                <input id="input_ascii" class="input-valores" type="text" maxlength="1" placeholder="Digite o valor em ASCII">
+            </div>
+
+            <div class="resultado" id="div_resultado_ascii"></div>
+            
+            <button id="button-conversao" onclick="converterASCII()">
+                Converter
+            </button>
+        </article>
+    </main>
+</body>
+</html>
+
+<script src="../script.js"></script>

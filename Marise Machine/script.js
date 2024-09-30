@@ -66,6 +66,17 @@ function converterHexa() {
     }
 }
 
+function converterASCII() {
+    div_resultado_ascii.innerHTML = '';
+
+    var caractere = input_ascii.value;
+    var decimal = caractere.charCodeAt();
+
+    div_resultado_ascii.innerHTML += "<b>Decimal: </b>" + decimal + '<br>';
+    div_resultado_ascii.innerHTML += "<b>Binário: </b>" + decimal.toString(2) + '<br>';
+    div_resultado_ascii.innerHTML += "<b>Hexadecimal: </b>" + decimal.toString(16) + '<br>';
+}
+
 function somaDecimal() {
     const numero1 = Number(input_numero1.value)
     const numero2 = Number(input_numero2.value)
@@ -233,6 +244,7 @@ function divisaoOctal() {
         div_resultado_divisao.innerHTML = `A divisão entra os número é de ${resultado.toString(8)}`
     }
 }
+
 function somaHexa() {
     const numero1 = parseInt(input_numero1.value, 16)
     const numero2 = parseInt(input_numero2.value, 16)
